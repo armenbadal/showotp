@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ShowOTP</title>
+    <link rel="stylesheet" type="text/css" href="w3.css">
+    <style>
+      .pass-code-table {
+        display: table;
+        width: 100%
+      }
+      .pass-code-table-body {
+        display: table-row-group
+      }
+      .pass-code-table-row:nth-child(even) {
+        display: table-row;
+        background-color:beige
+      }
+      .pass-code-table-row:nth-child(odd) {
+        display: table-row;
+        background-color: white
+      }
+      .pass-code-table-name-cell {
+        display: table-cell;
+        width: 30%
+      }
+      .pass-code-table-secret-cell {
+        display: table-cell;
+        width: 30%;
+        font-family: monospace
+      }
+      .pass-code-table-otp-cell {
+        display: table-cell;
+        width: 20%
+      }
+      .pass-code-table-timer-cell {
+        display: table-cell;
+        width: 20%
+      }
+    </style>
+  </head>
+  <body>
+    <template id='one-user'>
+      <div class='pass-code-table-row'>
+        <div class='pass-code-table-name-cell'></div>
+        <div class='pass-code-table-secret-cell'></div>
+        <div class='pass-code-table-otp-cell'></div>
+        <div class='pass-code-table-timer-cell w3-tiny'></div>
+      </div>
+    </template>
+
+    <!-- Data -->
+    <div class='pass-code-table w3-padding-small'>
+      <div class='pass-code-table-body' id='user-list'>
+        <!-- rows here -->
+      </div>
+    </div>
+
+    <dialog id='show-information'>
+      <header>Տեղեկութիւն</header>
+      <p>Մեկանգամեայ գաղտնաբառերի ծրագիր։</p>
+      <button id="si-ok">Ok</button>
+    </dialog>
+
+    <script type='text/javascript' src='showotpeng.js'></script>
+  </body>
+</html>
