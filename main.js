@@ -32,6 +32,10 @@ const mainMenuTempl = [
                 click() { mainWindow.webContents.send('read-data-file') }
             },
             {
+                label: 'Նոր անձ...',
+                click() { mainWindow.webContents.send('add-new-user-by-url') }
+            },
+            {
                 type: 'separator'
             },
             {

@@ -74,6 +74,13 @@ var readUserDataAndCreateTable = function() {
 ipc.on('read-data-file', readUserDataAndCreateTable)
 
 //
+ipc.on('add-new-user-by-url', () => {
+    let newUser = document.getElementById('add-new-user')
+    document.getElementById('anu-ok').onclick = function() { newUser.close() }
+    newUser.show() 
+})
+
+//
 ipc.on('show-info', () => {
     let infoBox = document.getElementById('show-information')
     document.getElementById('si-ok').onclick = function() { infoBox.close() }
